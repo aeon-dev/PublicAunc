@@ -307,7 +307,11 @@ end
 		assert(assert(loadstring("return ... + 1"))(1) == 2, "Failed to do simple math")
 		assert(type(select(2, loadstring("f"))) == "string", "Loadstring did not return anything for a compiler error")
 	end)
-	
+
+test("loadstring(httpget)", {}, function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/aeon-dev/RandomStuff/main/loadstringtest"))()
+end
+
 	test("newcclosure", {}, function()
 		local function test()
 			return true
