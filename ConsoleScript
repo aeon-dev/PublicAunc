@@ -194,7 +194,7 @@ end)
 
 test("loadstring(httpget)", {}, function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/aeon-dev/RandomStuff/main/loadstringtest"))()
-end
+end)
 
 test("newcclosure", {}, function()
 	local function test()
