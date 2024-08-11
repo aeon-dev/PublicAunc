@@ -116,7 +116,7 @@ local function IOJEZ_fake_script() -- DiscButton.DiscScript
 	local script = Instance.new('LocalScript', DiscButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		-- DISCORD BUTTON TEXT
+		    script.Parent.Text("https://discord.gg/fpX84vjYBK")
 	end)
 end
 coroutine.wrap(IOJEZ_fake_script)()
