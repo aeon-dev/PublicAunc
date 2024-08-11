@@ -1,0 +1,59 @@
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/Rain-Design/Libraries/main/Shaman/Library.lua'))()
+local Flags = Library.Flags
+
+local Window = Library:Window({
+    Text = "AUNC Loader"
+})
+
+local Tab = Window:Tab({
+    Text = "Select"
+})
+
+local Section = Tab:Section({
+    Text = "Console"
+})
+
+Section:Button({
+    Text = "AUNC Console Version",
+    Tooltip = "This opens AUNC Console Version.",
+
+    Callback = function(v)
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/aeon-dev/PublicAunc/main/ConsoleScript"))()
+    end
+})
+
+local Section2 = Tab:Section({
+    Text = "UI"
+})
+
+Section2:Button({
+    Text = "AUNC UI Version",
+    Tooltip = "This opens AUNC UI Version. (Check Console, F9)",
+
+    Callback = function(v)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/aeon-dev/PublicAunc/main/UIScript"))()
+    end
+})
+
+local Section3 = Tab:Section({
+    Text = "Misc"
+})
+
+Section3:Button({
+    Text = "Discord",
+    Tooltip = "Opens Discord",
+
+    Callback = function(v)
+      local discordInvite = "https://discord.gg/fpX84vjYBK"
+
+if syn then
+    syn.open_url(discordInvite)
+elseif getexecutorname and getexecutorname():find("ScriptWare") then
+    open_url(discordInvite)
+else
+    setclipboard(discordInvite)
+    print("The Discord invite link has been copied to your clipboard. Please paste it into your browser.")
+end
+
+    end
+})
