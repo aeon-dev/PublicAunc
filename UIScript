@@ -1,151 +1,121 @@
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/Rain-Design/Libraries/main/Shaman/Library.lua'))()
+local Flags = Library.Flags
 
--- Instances:
+local Window = Library:Window({
+    Text = "AUNC UI Version"
+})
 
-local GUi = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local UIListLayout = Instance.new("UIListLayout")
-local UICorner_2 = Instance.new("UICorner")
-local Header = Instance.new("TextLabel")
-local UICorner_3 = Instance.new("UICorner")
-local DiscButton = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local CloseButton = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local Template = Instance.new("TextLabel")
+local Tab = Window:Tab({
+    Text = "Main"
+})
 
---Properties:
+local Section2 = Tab:Section({
+    Text = "READ ME (IMPORTANT)"
+})
+--31
+local labe = Section2:Label({
+    Text = "If not everything is loaded,", 
+    Color = Color3.fromRGB(255,255,255)
+})
 
-GUi.Name = "GUi"
-GUi.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-GUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-GUi.ResetOnSpawn = false
+local labe2 = Section2:Label({
+    Text = "close and open the label.",
+    Color = Color3.fromRGB(255,255,255)
+})
 
-Frame.Parent = GUi
-Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame.Size = UDim2.new(0.330000013, 0, 0.616999984, 0)
+local label3 = Section2:Label({
+    Text = "I'm switching it to fix bugs",
+    Color = Color3.fromRGB(255,255,255)
+})
 
-UICorner.CornerRadius = UDim.new(0, 16)
-UICorner.Parent = Frame
+local labe23 = Section2:Label({
+    Text = "in the future.",
+    Color = Color3.fromRGB(255,255,255)
+})
 
-ScrollingFrame.Parent = Frame
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0.0335731879, 0, 0.100639395, 0)
-ScrollingFrame.Size = UDim2.new(0, 590, 0, 574)
+Section2:Button({
+    Text = "Discord (MIGHT BREAK??)",
+    Tooltip = "Opens Discord",
 
-UIListLayout.Parent = ScrollingFrame
-UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 10)
+    Callback = function(v)
+    local discordInvite = "https://discord.gg/fpX84vjYBK"
 
-UICorner_2.CornerRadius = UDim.new(0, 16)
-UICorner_2.Parent = ScrollingFrame
-
-Header.Name = "Header"
-Header.Parent = Frame
-Header.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-Header.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Header.BorderSizePixel = 0
-Header.Position = UDim2.new(0.327514231, 0, 0.0123641118, 0)
-Header.Size = UDim2.new(0, 218, 0, 50)
-Header.Font = Enum.Font.FredokaOne
-Header.Text = "Aeon's UNC Test"
-Header.TextColor3 = Color3.fromRGB(255, 255, 255)
-Header.TextScaled = true
-Header.TextSize = 14.000
-Header.TextWrapped = true
-
-UICorner_3.Parent = Header
-
-DiscButton.Name = "DiscButton"
-DiscButton.Parent = Frame
-DiscButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-DiscButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-DiscButton.BorderSizePixel = 0
-DiscButton.Position = UDim2.new(0.0335731879, 0, 0.0227243416, 0)
-DiscButton.Size = UDim2.new(0, 171, 0, 36)
-DiscButton.Font = Enum.Font.FredokaOne
-DiscButton.Text = "Join Discord"
-DiscButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscButton.TextSize = 24.000
-DiscButton.TextWrapped = true
-
-UICorner_4.Parent = DiscButton
-
-CloseButton.Name = "CloseButton"
-CloseButton.Parent = Frame
-CloseButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-CloseButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CloseButton.BorderSizePixel = 0
-CloseButton.Position = UDim2.new(0.906986833, 0, 0.0121690221, 0)
-CloseButton.Size = UDim2.new(0, 50, 0, 50)
-CloseButton.Font = Enum.Font.FredokaOne
-CloseButton.Text = "X"
-CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-CloseButton.TextSize = 24.000
-CloseButton.TextWrapped = true
-
-UICorner_5.Parent = CloseButton
-
-Template.Name = "Template"
-Template.Parent = game.StarterGui.GUi.Frame.Handler
-Template.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Template.BackgroundTransparency = 1.000
-Template.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Template.BorderSizePixel = 0
-Template.Position = UDim2.new(-0.284180522, 0, 0, 0)
-Template.Size = UDim2.new(0, 562, 0, 33)
-Template.Font = Enum.Font.FredokaOne
-Template.Text = "FUNCTION YES NO"
-Template.TextColor3 = Color3.fromRGB(255, 255, 255)
-Template.TextScaled = true
-Template.TextSize = 14.000
-Template.TextWrapped = true
-
--- Scripts:
-
-local function IOJEZ_fake_script() -- DiscButton.DiscScript 
-	local script = Instance.new('LocalScript', DiscButton)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		    script.Parent.Text("https://discord.gg/fpX84vjYBK")
-	end)
+if syn then
+    syn.open_url(discordInvite)
+elseif getexecutorname and getexecutorname():find("ScriptWare") then
+    open_url(discordInvite)
+else
+    setclipboard(discordInvite)
+    print("The Discord invite link has been copied to your clipboard. Please paste it into your browser.")
 end
-coroutine.wrap(IOJEZ_fake_script)()
-local function DOPGJ_fake_script() -- CloseButton.LocalScript 
-	local script = Instance.new('LocalScript', CloseButton)
 
-	script.Parent.Parent.Parent:Destroy()
-end
-coroutine.wrap(DOPGJ_fake_script)()
-local function KNPWMC_fake_script() -- Frame.Handler 
-	local script = Instance.new('LocalScript', Frame)
+    end
+})
 
-	local template = script.Template
-	
-	local passes, fails, undefined = 0, 0, 0
+local Section = Tab:Section({
+    Text = "Info"
+})
+
+local passes, fails, undefined = 0, 0, 0
 	local running = 0
 	
-	local function prnt(text)
-		 local newtext = template:Clone()
-		 newtext.Text = text
-		 newtext.Parent = script.Parent.ScrollingFrame
-	end
+local function prnt(text)
+    local maxLength = 31
+
+    if #text > maxLength then
+        -- Split the text into two parts
+        local firstPart = text:sub(1, maxLength)
+        local secondPart = text:sub(maxLength + 1)
+
+        -- Create the first label
+        local label1 = Section:Label({
+            Text = firstPart,
+            Color = Color3.fromRGB(255, 255, 255),
+        })
+
+        -- Create the second label
+        local label2 = Section:Label({
+            Text = secondPart,
+            Color = Color3.fromRGB(255, 255, 255),
+        })
+    else
+        -- Create a single label for text shorter than or equal to maxLength
+        local label = Section:Label({
+            Text = text,
+            Color = Color3.fromRGB(255, 255, 255),
+        })
+    end
+end
+
 	
-	local function wrn(text)
-		local newtext = template:Clone()
-		newtext.Text = text
-		newtext.TextColor3 = Color3.fromRGB(255, 195, 121)
-		newtext.Parent = script.Parent.ScrollingFrame
-	end
+local function wrn(text)
+    local maxLength = 31
+
+    if #text > maxLength then
+        -- Split the text into two parts
+        local firstPart = text:sub(1, maxLength)
+        local secondPart = text:sub(maxLength + 1)
+
+        -- Create the first label
+        local warnlbl1 = Section:Label({
+            Text = firstPart,
+            Color = Color3.fromRGB(255, 195, 121),
+        })
+
+        -- Create the second label
+        local warnlbl2 = Section:Label({
+            Text = secondPart,
+            Color = Color3.fromRGB(255, 195, 121),
+        })
+    else
+        -- Create a single label for text shorter than or equal to maxLength
+        local warnlbl = Section:Label({
+            Text = text,
+            Color = Color3.fromRGB(255, 195, 121),
+        })
+    end
+end
+
 	
 	local function getGlobal(path)
 		local value = getfenv(0)
@@ -2069,6 +2039,4 @@ local function KNPWMC_fake_script() -- Frame.Handler
 		})
 		assert(response, "Failed to make HTTP request")
 	end)
-	
-end
-coroutine.wrap(KNPWMC_fake_script)()
+
