@@ -34,8 +34,8 @@ local labe23 = Section2:Label({
 })
 
 Section2:Button({
-    Text = "Discord (MIGHT BREAK??)",
-    Tooltip = "Opens Discord",
+    Text = "Discord",
+    Tooltip = "Copies Discord",
 
     Callback = function(v)
     local discordInvite = "https://discord.gg/fpX84vjYBK"
