@@ -1,0 +1,2074 @@
+
+-- Instances:
+
+local GUi = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local UICorner_2 = Instance.new("UICorner")
+local Header = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local DiscButton = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local CloseButton = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Template = Instance.new("TextLabel")
+
+--Properties:
+
+GUi.Name = "GUi"
+GUi.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+GUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+GUi.ResetOnSpawn = false
+
+Frame.Parent = GUi
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.Size = UDim2.new(0.330000013, 0, 0.616999984, 0)
+
+UICorner.CornerRadius = UDim.new(0, 16)
+UICorner.Parent = Frame
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0335731879, 0, 0.100639395, 0)
+ScrollingFrame.Size = UDim2.new(0, 590, 0, 574)
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 10)
+
+UICorner_2.CornerRadius = UDim.new(0, 16)
+UICorner_2.Parent = ScrollingFrame
+
+Header.Name = "Header"
+Header.Parent = Frame
+Header.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Header.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Header.BorderSizePixel = 0
+Header.Position = UDim2.new(0.327514231, 0, 0.0123641118, 0)
+Header.Size = UDim2.new(0, 218, 0, 50)
+Header.Font = Enum.Font.FredokaOne
+Header.Text = "Aeon's UNC Test"
+Header.TextColor3 = Color3.fromRGB(255, 255, 255)
+Header.TextScaled = true
+Header.TextSize = 14.000
+Header.TextWrapped = true
+
+UICorner_3.Parent = Header
+
+DiscButton.Name = "DiscButton"
+DiscButton.Parent = Frame
+DiscButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DiscButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DiscButton.BorderSizePixel = 0
+DiscButton.Position = UDim2.new(0.0335731879, 0, 0.0227243416, 0)
+DiscButton.Size = UDim2.new(0, 171, 0, 36)
+DiscButton.Font = Enum.Font.FredokaOne
+DiscButton.Text = "Join Discord"
+DiscButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscButton.TextSize = 24.000
+DiscButton.TextWrapped = true
+
+UICorner_4.Parent = DiscButton
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = Frame
+CloseButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CloseButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CloseButton.BorderSizePixel = 0
+CloseButton.Position = UDim2.new(0.906986833, 0, 0.0121690221, 0)
+CloseButton.Size = UDim2.new(0, 50, 0, 50)
+CloseButton.Font = Enum.Font.FredokaOne
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextSize = 24.000
+CloseButton.TextWrapped = true
+
+UICorner_5.Parent = CloseButton
+
+Template.Name = "Template"
+Template.Parent = game.StarterGui.GUi.Frame.Handler
+Template.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Template.BackgroundTransparency = 1.000
+Template.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Template.BorderSizePixel = 0
+Template.Position = UDim2.new(-0.284180522, 0, 0, 0)
+Template.Size = UDim2.new(0, 562, 0, 33)
+Template.Font = Enum.Font.FredokaOne
+Template.Text = "FUNCTION YES NO"
+Template.TextColor3 = Color3.fromRGB(255, 255, 255)
+Template.TextScaled = true
+Template.TextSize = 14.000
+Template.TextWrapped = true
+
+-- Scripts:
+
+local function IOJEZ_fake_script() -- DiscButton.DiscScript 
+	local script = Instance.new('LocalScript', DiscButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		-- DISCORD BUTTON TEXT
+	end)
+end
+coroutine.wrap(IOJEZ_fake_script)()
+local function DOPGJ_fake_script() -- CloseButton.LocalScript 
+	local script = Instance.new('LocalScript', CloseButton)
+
+	script.Parent.Parent.Parent:Destroy()
+end
+coroutine.wrap(DOPGJ_fake_script)()
+local function KNPWMC_fake_script() -- Frame.Handler 
+	local script = Instance.new('LocalScript', Frame)
+
+	local template = script.Template
+	
+	local passes, fails, undefined = 0, 0, 0
+	local running = 0
+	
+	local function prnt(text)
+		 local newtext = template:Clone()
+		 newtext.Text = text
+		 newtext.Parent = script.Parent.ScrollingFrame
+	end
+	
+	local function wrn(text)
+		local newtext = template:Clone()
+		newtext.Text = text
+		newtext.TextColor3 = Color3.fromRGB(255, 195, 121)
+		newtext.Parent = script.Parent.ScrollingFrame
+	end
+	
+	local function getGlobal(path)
+		local value = getfenv(0)
+		while value ~= nil and path ~= "" do
+			local name, nextValue = string.match(path, "^([^.]+)%.?(.*)$")
+			value = value[name]
+			path = nextValue
+		end
+		return value
+	end
+	
+	local function test(name, aliases, callback)
+		running += 1
+		task.spawn(function()
+			if not callback then
+				prnt("⏺️ " .. name)
+			elseif not getGlobal(name) then
+				fails += 1
+				wrn("⛔ " .. name)
+			else
+				local success, message = pcall(callback)
+				if success then
+					passes += 1
+					prnt("✅ " .. name .. (message and " • " .. message or ""))
+				else
+					fails += 1
+					wrn("⛔ " .. name .. " failed: " .. message)
+				end
+			end
+	
+			local undefinedAliases = {}
+			for _, alias in ipairs(aliases) do
+				if getGlobal(alias) == nil then
+					table.insert(undefinedAliases, alias)
+				end
+			end
+	
+			if #undefinedAliases > 0 then
+				undefined += 1
+				wrn("⚠️ " .. table.concat(undefinedAliases, ", "))
+			end
+	
+			running -= 1
+		end)
+	end
+	
+	-- Header and summary
+	prnt("\n")
+	prnt("AUNC Environment Check for " .. identifyexecutor() )
+	prnt("✅ - Pass, ⛔ - Fail, ⏺️ - No test, ⚠️ - Missing aliases\n")
+	
+	task.defer(function()
+		repeat task.wait() until running == 0
+		local rate = math.round(passes / (passes + fails) * 100)
+		local outOf = passes .. " out of " .. (passes + fails)
+		prnt("\n")
+		prnt("AUNC Summary for " .. identifyexecutor())
+		prnt("✅ Tested with a " .. rate .. "% success rate (" .. outOf .. ")")
+		prnt("⛔ " .. fails .. " tests failed")
+		prnt("⚠️ " .. undefined .. " globals are missing aliases")
+	end)
+	
+	-- Cache
+	test("cache.invalidate", {}, function()
+		local container = Instance.new("Folder")
+		local part = Instance.new("Part", container)
+		cache.invalidate(container:FindFirstChild("Part"))
+		assert(part ~= container:FindFirstChild("Part"), "Reference `part` could not be invalidated")
+	end)
+	
+	test("cache.iscached", {}, function()
+		local part = Instance.new("Part")
+		assert(cache.iscached(part), "Part should be cached")
+		cache.invalidate(part)
+		assert(not cache.iscached(part), "Part should not be cached")
+	end)
+	
+	test("cache.replace", {}, function()
+		local part = Instance.new("Part")
+		local fire = Instance.new("Fire")
+		cache.replace(part, fire)
+		assert(part ~= fire, "Part was not replaced with Fire")
+	end)
+	
+	test("cloneref", {}, function()
+		local part = Instance.new("Part")
+		local clone = cloneref(part)
+		assert(part ~= clone, "Clone should not be equal to original")
+		clone.Name = "Test"
+		assert(part.Name == "Test", "Clone should have updated the original")
+	end)
+	
+	test("compareinstances", {}, function()
+		local part = Instance.new("Part")
+		local clone = cloneref(part)
+		assert(part ~= clone, "Clone should not be equal to original")
+		assert(compareinstances(part, clone), "Clone should be equal to original when using compareinstances()")
+	end)
+	
+	-- Closures
+	local function shallowEqual(t1, t2)
+		if t1 == t2 then
+			return true
+		end
+		local UNIQUE_TYPES = {
+			["function"] = true,
+			["table"] = true,
+			["userdata"] = true,
+			["thread"] = true,
+		}
+		for k, v in pairs(t1) do
+			if UNIQUE_TYPES[type(v)] then
+				if type(t2[k]) ~= type(v) then
+					return false
+				end
+			elseif t2[k] ~= v then
+				return false
+			end
+		end
+		for k, v in pairs(t2) do
+			if UNIQUE_TYPES[type(v)] then
+				if type(t2[k]) ~= type(v) then
+					return false
+				end
+			elseif t1[k] ~= v then
+				return false
+			end
+		end
+		return true
+	end
+	
+	test("checkcaller", {}, function()
+		assert(checkcaller(), "Main scope should return true")
+	end)
+	
+	test("clonefunction", {}, function()
+		local function test()
+			return "success"
+		end
+		local copy = clonefunction(test)
+		assert(test() == copy(), "The clone should return the same value as the original")
+		assert(test ~= copy, "The clone should not be equal to the original")
+	end)
+	
+	test("getcallingscript", {})
+	
+	test("getscriptclosure", {"getscriptfunction"}, function()
+		local module = game:GetService("CoreGui").RobloxGui.Modules.Common.Constants
+		local constants = getrenv().require(module)
+		local generated = getscriptclosure(module)()
+		assert(constants ~= generated, "Generated module should not match the original")
+		assert(shallowEqual(constants, generated), "Generated constant table should be shallow equal to the original")
+	end)
+	
+	test("hookfunction", {"replaceclosure"}, function()
+		local function test()
+			return true
+		end
+		local ref = hookfunction(test, function()
+			return false
+		end)
+		assert(test() == false, "Function should return false")
+		assert(ref() == true, "Original function should return true")
+		assert(test ~= ref, "Original function should not be same as the reference")
+	end)
+	
+	test("iscclosure", {}, function()
+		assert(iscclosure(print) == true, "Function 'print' should be a C closure")
+		assert(iscclosure(function() end) == false, "Executor function should not be a C closure")
+	end)
+	
+	test("islclosure", {}, function()
+		assert(islclosure(print) == false, "Function 'print' should not be a Lua closure")
+		assert(islclosure(function() end) == true, "Executor function should be a Lua closure")
+	end)
+	
+	test("isexecutorclosure", {"checkclosure", "isourclosure"}, function()
+		assert(isexecutorclosure(isexecutorclosure) == true, "Did not return true for an executor global")
+		assert(isexecutorclosure(newcclosure(function() end)) == true, "Did not return true for an executor C closure")
+		assert(isexecutorclosure(function() end) == true, "Did not return true for an executor Luau closure")
+		assert(isexecutorclosure(print) == false, "Did not return false for a Roblox global")
+	end)
+	
+	test("loadstring", {}, function()
+		local animate = game:GetService("Players").LocalPlayer.Character.Animate
+		local bytecode = getscriptbytecode(animate)
+		local func = loadstring(bytecode)
+		assert(type(func) ~= "function", "Luau bytecode should not be loadable!")
+		assert(assert(loadstring("return ... + 1"))(1) == 2, "Failed to do simple math")
+		assert(type(select(2, loadstring("f"))) == "string", "Loadstring did not return anything for a compiler error")
+	end)
+	
+	test("newcclosure", {}, function()
+		local function test()
+			return true
+		end
+		local testC = newcclosure(test)
+		assert(test() == testC(), "New C closure should return the same value as the original")
+		assert(test ~= testC, "New C closure should not be same as the original")
+		assert(iscclosure(testC), "New C closure should be a C closure")
+	end)
+	
+	-- Console
+	test("rconsoleclear", {"consoleclear"})
+	test("rconsolecreate", {"consolecreate"})
+	test("rconsoledestroy", {"consoledestroy"})
+	test("rconsoleinput", {"consoleinput"})
+	test("rconsoleprint", {"consoleprint"})
+	test("rconsolesettitle", {"rconsolename", "consolesettitle"})
+	
+	-- Crypt
+	test("crypt.base64encode", {"crypt.base64.encode", "crypt.base64_encode", "base64.encode", "base64_encode"}, function()
+		assert(crypt.base64encode("test") == "dGVzdA==", "Base64 encoding failed")
+	end)
+	
+	test("crypt.base64decode", {"crypt.base64.decode", "crypt.base64_decode", "base64.decode", "base64_decode"}, function()
+		assert(crypt.base64decode("dGVzdA==") == "test", "Base64 decoding failed")
+	end)
+	
+	test("crypt.encrypt", {}, function()
+		local key = crypt.generatekey()
+		local encrypted, iv = crypt.encrypt("test", key)
+		assert(crypt.decrypt(encrypted, key) == "test", "Encryption and decryption failed")
+	end)
+	
+	test("crypt.hash", {}, function()
+		local hash = crypt.hash("test")
+		assert(#hash == 64, "Hash length should be 64 characters")
+	end)
+	
+	
+	test("getcallingscript", {})
+	
+	test("debug.getconstant", {}, function()
+		local function test()
+			print("Hello, world!")
+		end
+		assert(debug.getconstant(test, 1) == "print", "First constant must be print")
+		assert(debug.getconstant(test, 2) == nil, "Second constant must be nil")
+		assert(debug.getconstant(test, 3) == "Hello, world!", "Third constant must be 'Hello, world!'")
+	end)
+	
+	test("debug.getconstants", {}, function()
+		local function test()
+			local num = 5000 .. 50000
+			print("Hello, world!", num, warn)
+		end
+		local constants = debug.getconstants(test)
+		assert(constants[1] == 50000, "First constant must be 50000")
+		assert(constants[2] == "print", "Second constant must be print")
+		assert(constants[3] == nil, "Third constant must be nil")
+		assert(constants[4] == "Hello, world!", "Fourth constant must be 'Hello, world!'")
+		assert(constants[5] == "warn", "Fifth constant must be warn")
+	end)
+	
+	test("debug.getinfo", {}, function()
+		local types = {
+			source = "string",
+			short_src = "string",
+			func = "function",
+			what = "string",
+			currentline = "number",
+			name = "string",
+			nups = "number",
+			numparams = "number",
+			is_vararg = "number",
+		}
+		local function test(...)
+			print(...)
+		end
+		local info = debug.getinfo(test)
+		for k, v in pairs(types) do
+			assert(info[k] ~= nil, "Did not return a table with a '" .. k .. "' field")
+			assert(type(info[k]) == v, "Did not return a table with " .. k .. " as a " .. v .. " (got " .. type(info[k]) .. ")")
+		end
+	end)
+	
+	test("debug.getproto", {}, function()
+		local function test()
+			local function proto()
+				return true
+			end
+		end
+		local proto = debug.getproto(test, 1, true)[1]
+		local realproto = debug.getproto(test, 1)
+		assert(proto, "Failed to get the inner function")
+		assert(proto() == true, "The inner function did not return anything")
+		if not realproto() then
+			return "Proto return values are disabled on this executor"
+		end
+	end)
+	
+	test("debug.getprotos", {}, function()
+		local function test()
+			local function _1()
+				return true
+			end
+			local function _2()
+				return true
+			end
+			local function _3()
+				return true
+			end
+		end
+		for i in ipairs(debug.getprotos(test)) do
+			local proto = debug.getproto(test, i, true)[1]
+			local realproto = debug.getproto(test, i)
+			assert(proto(), "Failed to get inner function " .. i)
+			if not realproto() then
+				return "Proto return values are disabled on this executor"
+			end
+		end
+	end)
+	
+	test("debug.getstack", {}, function()
+		local _ = "a" .. "b"
+		assert(debug.getstack(1, 1) == "ab", "The first item in the stack should be 'ab'")
+		assert(debug.getstack(1)[1] == "ab", "The first item in the stack table should be 'ab'")
+	end)
+	
+	test("debug.getupvalue", {}, function()
+		local upvalue = function() end
+		local function test()
+			print(upvalue)
+		end
+		assert(debug.getupvalue(test, 1) == upvalue, "Unexpected value returned from debug.getupvalue")
+	end)
+	
+	test("debug.getupvalues", {}, function()
+		local upvalue = function() end
+		local function test()
+			print(upvalue)
+		end
+		local upvalues = debug.getupvalues(test)
+		assert(upvalues[1] == upvalue, "Unexpected value returned from debug.getupvalues")
+	end)
+	
+	test("debug.setconstant", {}, function()
+		local function test()
+			return "fail"
+		end
+		debug.setconstant(test, 1, "success")
+		assert(test() == "success", "debug.setconstant did not set the first constant")
+	end)
+	
+	test("debug.setstack", {}, function()
+		local function test()
+			return "fail", debug.setstack(1, 1, "success")
+		end
+		assert(test() == "success", "debug.setstack did not set the first stack item")
+	end)
+	
+	test("debug.setupvalue", {}, function()
+		local function upvalue()
+			return "fail"
+		end
+		local function test()
+			return upvalue()
+		end
+		debug.setupvalue(test, 1, function()
+			return "success"
+		end)
+		assert(test() == "success", "debug.setupvalue did not set the first upvalue")
+	end)
+	
+	
+	test("readfile", {}, function()
+		writefile(".tests/readfile.txt", "success")
+		assert(readfile(".tests/readfile.txt") == "success", "Did not return the contents of the file")
+	end)
+	
+	if isfolder and makefolder and delfolder then
+		if isfolder(".tests") then
+			delfolder(".tests")
+		end
+		makefolder(".tests")
+	end
+	
+	test("readfile", {}, function()
+		writefile(".tests/readfile.txt", "success")
+		assert(readfile(".tests/readfile.txt") == "success", "Did not return the contents of the file")
+	end)
+	
+	test("listfiles", {}, function()
+		makefolder(".tests/listfiles")
+		writefile(".tests/listfiles/test_1.txt", "success")
+		writefile(".tests/listfiles/test_2.txt", "success")
+		local files = listfiles(".tests/listfiles")
+		assert(#files == 2, "Did not return the correct number of files")
+		assert(isfile(files[1]), "Did not return a file path")
+		assert(readfile(files[1]) == "success", "Did not return the correct files")
+		makefolder(".tests/listfiles_2")
+		makefolder(".tests/listfiles_2/test_1")
+		makefolder(".tests/listfiles_2/test_2")
+		local folders = listfiles(".tests/listfiles_2")
+		assert(#folders == 2, "Did not return the correct number of folders")
+		assert(isfolder(folders[1]), "Did not return a folder path")
+	end)
+	
+	test("writefile", {}, function()
+		writefile(".tests/writefile.txt", "success")
+		assert(readfile(".tests/writefile.txt") == "success", "Did not write the file")
+		local requiresFileExt = pcall(function()
+			writefile(".tests/writefile", "success")
+			assert(isfile(".tests/writefile.txt"))
+		end)
+		if not requiresFileExt then
+			return "This executor requires a file extension in writefile"
+		end
+	end)
+	
+	test("makefolder", {}, function()
+		makefolder(".tests/makefolder")
+		assert(isfolder(".tests/makefolder"), "Did not create the folder")
+	end)
+	
+	test("appendfile", {}, function()
+		writefile(".tests/appendfile.txt", "su")
+		appendfile(".tests/appendfile.txt", "cce")
+		appendfile(".tests/appendfile.txt", "ss")
+		assert(readfile(".tests/appendfile.txt") == "success", "Did not append the file")
+	end)
+	
+	test("isfile", {}, function()
+		writefile(".tests/isfile.txt", "success")
+		assert(isfile(".tests/isfile.txt") == true, "Did not return true for a file")
+		assert(isfile(".tests") == false, "Did not return false for a folder")
+		assert(isfile(".tests/doesnotexist.exe") == false, "Did not return false for a nonexistent path (got " .. tostring(isfile(".tests/doesnotexist.exe")) .. ")")
+	end)
+	
+	test("isfolder", {}, function()
+		assert(isfolder(".tests") == true, "Did not return false for a folder")
+		assert(isfolder(".tests/doesnotexist.exe") == false, "Did not return false for a nonexistent path (got " .. tostring(isfolder(".tests/doesnotexist.exe")) .. ")")
+	end)
+	
+	test("delfolder", {}, function()
+		makefolder(".tests/delfolder")
+		delfolder(".tests/delfolder")
+		assert(isfolder(".tests/delfolder") == false, "Failed to delete folder (isfolder = " .. tostring(isfolder(".tests/delfolder")) .. ")")
+	end)
+	
+	test("delfile", {}, function()
+		writefile(".tests/delfile.txt", "Hello, world!")
+		delfile(".tests/delfile.txt")
+		assert(isfile(".tests/delfile.txt") == false, "Failed to delete file (isfile = " .. tostring(isfile(".tests/delfile.txt")) .. ")")
+	end)
+	
+	
+	test("loadfile", {}, function()
+		writefile(".tests/loadfile.txt", "return ... + 1")
+		assert(assert(loadfile(".tests/loadfile.txt"))(1) == 2, "Failed to load a file with arguments")
+		writefile(".tests/loadfile.txt", "f")
+		local callback, err = loadfile(".tests/loadfile.txt")
+		assert(err and not callback, "Did not return an error message for a compiler error")
+	end)
+	
+	test("dofile", {})
+	
+	test("crypt.base64encode", {"crypt.base64.encode", "crypt.base64_encode", "base64.encode", "base64_encode"}, function()
+		assert(crypt.base64encode("test") == "dGVzdA==", "Base64 encoding failed")
+	end)
+	
+	test("crypt.base64decode", {"crypt.base64.decode", "crypt.base64_decode", "base64.decode", "base64_decode"}, function()
+		assert(crypt.base64decode("dGVzdA==") == "test", "Base64 decoding failed")
+	end)
+	
+	test("crypt.encrypt", {}, function()
+		local key = crypt.generatekey()
+		local encrypted, iv = crypt.encrypt("test", key, nil, "CBC")
+		assert(iv, "crypt.encrypt should return an IV")
+		local decrypted = crypt.decrypt(encrypted, key, iv, "CBC")
+		assert(decrypted == "test", "Failed to decrypt raw string from encrypted data")
+	end)
+	
+	test("crypt.decrypt", {}, function()
+		local key, iv = crypt.generatekey(), crypt.generatekey()
+		local encrypted = crypt.encrypt("test", key, iv, "CBC")
+		local decrypted = crypt.decrypt(encrypted, key, iv, "CBC")
+		assert(decrypted == "test", "Failed to decrypt raw string from encrypted data")
+	end)
+	
+	test("crypt.generatebytes", {}, function()
+		local size = math.random(10, 100)
+		local bytes = crypt.generatebytes(size)
+		assert(#crypt.base64decode(bytes) == size, "The decoded result should be " .. size .. " bytes long (got " .. #crypt.base64decode(bytes) .. " decoded, " .. #bytes .. " raw)")
+	end)
+	
+	test("crypt.generatekey", {}, function()
+		local key = crypt.generatekey()
+		assert(#crypt.base64decode(key) == 32, "Generated key should be 32 bytes long when decoded")
+	end)
+	
+	test("crypt.hash", {}, function()
+		local algorithms = {'sha1', 'sha384', 'sha512', 'md5', 'sha256', 'sha3-224', 'sha3-256', 'sha3-512'}
+		for _, algorithm in ipairs(algorithms) do
+			local hash = crypt.hash("test", algorithm)
+			assert(hash, "crypt.hash on algorithm '" .. algorithm .. "' should return a hash")
+		end
+	end)	
+	
+	test("isrbxactive", {"isgameactive"}, function()
+		assert(type(isrbxactive()) == "boolean", "Did not return a boolean value")
+	end)
+	
+	test("crypt.base64decode", {"crypt.base64.decode", "crypt.base64_decode", "base64.decode", "base64_decode"}, function()
+	
+		test("mouse1click", {})
+		assert(crypt.base64decode("dGVzdA==") == "test", "Base64 decoding failed")
+	end)
+	
+	test("mouse1press", {})
+	test("mouse1release", {})
+	test("mouse2click", {})
+	test("mouse2press", {})
+	test("mouse2release", {})
+	test("mousemoveabs", {})
+	test("mousemoverel", {})
+	test("mousescroll", {})
+	
+	
+	
+	
+	
+	-- Instances
+	
+	
+	
+	test("fireclickdetector", {}, function()
+	
+	
+	
+		local detector = Instance.new("ClickDetector")
+	
+	
+	
+		fireclickdetector(detector, 50, "MouseHoverEnter")
+	
+	end)
+	
+	test("crypt.encrypt", {}, function()
+	
+		test("getcallbackvalue", {}, function()
+	
+	
+	
+			local bindable = Instance.new("BindableFunction")
+	
+			local key = crypt.generatekey()
+	
+	
+	
+			local function test()
+	
+				local encrypted, iv = crypt.encrypt("test", key, nil, "CBC")
+	
+	
+	
+			end
+	
+			assert(iv, "crypt.encrypt should return an IV")
+	
+	
+	
+			bindable.OnInvoke = test
+	
+			local decrypted = crypt.decrypt(encrypted, key, iv, "CBC")
+	
+	
+	
+			assert(getcallbackvalue(bindable, "OnInvoke") == test, "Did not return the correct value")
+	
+			assert(decrypted == "test", "Failed to decrypt raw string from encrypted data")
+		end)
+	
+	
+	end)
+	
+	
+	
+	
+	
+	
+	test("crypt.generatebytes", {}, function()
+	
+	
+	
+		test("getcustomasset", {}, function()
+	
+			local size = math.random(10, 100)
+	
+	
+	
+			writefile(".tests/getcustomasset.txt", "success")
+	
+			local bytes = crypt.generatebytes(size)
+	
+	
+	
+			local contentId = getcustomasset(".tests/getcustomasset.txt")
+	
+			assert(#crypt.base64decode(bytes) == size, "The decoded result should be " .. size .. " bytes long (got " .. #crypt.base64decode(bytes) .. " decoded, " .. #bytes .. " raw)")
+	
+	
+	
+			assert(type(contentId) == "string", "Did not return a string")
+	
+	
+	
+			assert(#contentId > 0, "Returned an empty string")
+	
+	
+	
+			assert(string.match(contentId, "rbxasset://") == "rbxasset://", "Did not return an rbxasset url")
+	
+		end)
+	
+	
+	
+	
+	
+		test("gethiddenproperty", {}, function()
+	
+			local key = crypt.generatekey()
+	
+	
+	
+			local fire = Instance.new("Fire")
+	
+			assert(#crypt.base64decode(key) == 32, "Generated key should be 32 bytes long when decoded")
+	
+	
+	
+			local property, isHidden = gethiddenproperty(fire, "size_xml")
+	
+	
+	
+			assert(property == 5, "Did not return the correct value")
+	
+	
+	
+			assert(isHidden == true, "Did not return whether the property was hidden")
+	
+		end)
+	
+	
+	
+	
+	
+	
+	
+		test("sethiddenproperty", {}, function()
+	
+	
+	
+			local fire = Instance.new("Fire")
+	
+	
+	
+			local hidden = sethiddenproperty(fire, "size_xml", 10)
+	
+	
+	
+			assert(hidden, "Did not return true for the hidden property")
+	
+	
+	
+			assert(gethiddenproperty(fire, "size_xml") == 10, "Did not set the hidden property")
+	
+	
+	
+		end)
+	
+	
+	
+	
+	
+		test("gethui", {}, function()
+	
+	
+	
+			assert(typeof(gethui()) == "Instance", "Did not return an Instance")
+	
+	
+	
+		end)
+	
+	
+	
+	
+	
+		test("getinstances", {}, function()
+	
+	
+	
+			assert(getinstances()[1]:IsA("Instance"), "The first value is not an Instance")
+	
+	
+	
+		end)
+	
+	
+	
+	
+	
+		test("getnilinstances", {}, function()
+	
+	
+	
+			assert(getnilinstances()[1]:IsA("Instance"), "The first value is not an Instance")
+	
+	
+	
+			assert(getnilinstances()[1].Parent == nil, "The first value is not parented to nil")
+	
+	
+	
+		end)
+	
+	
+	end)
+	
+	
+	
+	test("isscriptable", {}, function()
+	
+		local algorithms = {'sha1', 'sha384', 'sha512', 'md5', 'sha256', 'sha3-224', 'sha3-256', 'sha3-512'}
+	
+	
+	
+		local fire = Instance.new("Fire")
+	
+		for _, algorithm in ipairs(algorithms) do
+	
+	
+	
+			assert(isscriptable(fire, "size_xml") == false, "Did not return false for a non-scriptable property (size_xml)")
+	
+			local hash = crypt.hash("test", algorithm)
+	
+	
+	
+			assert(isscriptable(fire, "Size") == true, "Did not return true for a scriptable property (Size)")
+	
+			assert(hash, "crypt.hash on algorithm '" .. algorithm .. "' should return a hash")
+	
+	
+		end
+	end)
+	
+	
+	
+	
+	
+	test("setscriptable", {}, function()
+	
+	
+	
+		local fire = Instance.new("Fire")
+	
+	
+	
+		local wasScriptable = setscriptable(fire, "size_xml", true)
+	
+	
+	
+		assert(wasScriptable == false, "Did not return false for a non-scriptable property (size_xml)")
+	
+	
+	
+		assert(isscriptable(fire, "size_xml") == true, "Did not set the scriptable property")
+	
+	
+	
+		fire = Instance.new("Fire")
+	
+	
+	
+		assert(isscriptable(fire, "size_xml") == false, "⚠️⚠️ setscriptable persists between unique instances ⚠️⚠️")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("setrbxclipboard", {})
+	
+	
+	
+	
+	
+	-- Metatable
+	
+	
+	
+	
+	
+	test("getrawmetatable", {}, function()
+	
+	
+	
+		local metatable = { __metatable = "Locked!" }
+	
+	
+	
+		local object = setmetatable({}, metatable)
+	
+	
+	
+		assert(getrawmetatable(object) == metatable, "Did not return the metatable")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("hookmetamethod", {}, function()
+	
+	
+	
+		local object = setmetatable({}, { __index = newcclosure(function() return false end), __metatable = "Locked!" })
+	
+	
+	
+		local ref = hookmetamethod(object, "__index", function() return true end)
+	
+	
+	
+		assert(object.test == true, "Failed to hook a metamethod and change the return value")
+	
+	
+	
+		assert(ref() == false, "Did not return the original function")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getnamecallmethod", {}, function()
+	
+	
+	
+		local method
+	
+	
+	
+		local ref
+	
+	
+	
+		ref = hookmetamethod(game, "__namecall", function(...)
+	
+	
+	
+			if not method then
+	
+	
+	
+				method = getnamecallmethod()
+	
+	
+	
+			end
+	
+	
+	
+			return ref(...)
+	
+	
+	
+		end)
+	
+	
+	
+		game:GetService("Lighting")
+	
+	
+	
+		assert(method == "GetService", "Did not get the correct method (GetService)")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("isreadonly", {}, function()
+	
+	
+	
+		local object = {}
+	
+	
+	
+		table.freeze(object)
+	
+	
+	
+		assert(isreadonly(object), "Did not return true for a read-only table")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("setrawmetatable", {}, function()
+	
+	
+	
+		local object = setmetatable({}, { __index = function() return false end, __metatable = "Locked!" })
+	
+	
+	
+		local objectReturned = setrawmetatable(object, { __index = function() return true end })
+	
+	
+	
+		assert(object, "Did not return the original object")
+	
+	
+	
+		assert(object.test == true, "Failed to change the metatable")
+	
+	
+	
+		if objectReturned then
+	
+	
+	
+			return objectReturned == object and "Returned the original object" or "Did not return the original object"
+	
+		end
+	
+	
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	
+	test("setreadonly", {}, function()
+	
+	
+	
+		local object = { success = false }
+	
+	
+	
+		table.freeze(object)
+	
+	
+	
+		setreadonly(object, false)
+	
+	
+	
+		object.success = true
+	
+	
+	
+		assert(object.success, "Did not allow the table to be modified")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	-- Miscellaneous
+	
+	
+	
+	
+	
+	test("identifyexecutor", {"getexecutorname"}, function()
+	
+	
+	
+		local name, version = identifyexecutor()
+	
+	
+	
+		assert(type(name) == "string", "Did not return a string for the name")
+	
+	
+	
+		return type(version) == "string" and "Returns version as a string" or "Does not return version"
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("lz4compress", {}, function()
+	
+	
+	
+		local raw = "Hello, world!"
+	
+	
+	
+		local compressed = lz4compress(raw)
+	
+	
+	
+		assert(type(compressed) == "string", "Compression did not return a string")
+	
+	
+	
+		assert(lz4decompress(compressed, #raw) == raw, "Decompression did not return the original string")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("lz4decompress", {}, function()
+	
+	
+	
+		local raw = "Hello, world!"
+	
+	
+	
+		local compressed = lz4compress(raw)
+	
+	
+	
+		assert(type(compressed) == "string", "Compression did not return a string")
+	
+	
+	
+		assert(lz4decompress(compressed, #raw) == raw, "Decompression did not return the original string")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("messagebox", {})
+	
+	
+	
+	
+	
+	test("queue_on_teleport", {"queueonteleport"})
+	
+	
+	
+	
+	
+	test("request", {"http.request", "http_request"}, function()
+	
+	
+	
+		local response = request({
+	
+	
+	
+			Url = "https://httpbin.org/user-agent",
+	
+	
+	
+			Method = "GET",
+	
+	
+	
+		})
+	
+	
+	
+		assert(type(response) == "table", "Response must be a table")
+	
+	
+	
+		assert(response.StatusCode == 200, "Did not return a 200 status code")
+	
+	
+	
+		local data = game:GetService("HttpService"):JSONDecode(response.Body)
+	
+	
+	
+		assert(type(data) == "table" and type(data["user-agent"]) == "string", "Did not return a table with a user-agent key")
+	
+	
+	
+		return "User-Agent: " .. data["user-agent"]
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("setclipboard", {"toclipboard"})
+	
+	
+	
+	
+	
+	test("setfpscap", {}, function()
+	
+	
+	
+		local renderStepped = game:GetService("RunService").RenderStepped
+	
+	
+	
+		local function step()
+	
+	
+	
+			renderStepped:Wait()
+	
+	
+	
+			local sum = 0
+	
+	
+	
+			for _ = 1, 5 do
+	
+	
+	
+				sum += 1 / renderStepped:Wait()
+	
+	
+	
+			end
+	
+	
+	
+			return math.round(sum / 5)
+	
+	
+	
+		end
+	
+	
+	
+		setfpscap(60)
+	
+	
+	
+		local step60 = step()
+	
+	
+	
+		setfpscap(0)
+	
+	
+	
+		local step0 = step()
+	
+	
+	
+		return step60 .. "fps @60 • " .. step0 .. "fps @0"
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	-- Scripts
+	
+	
+	
+	
+	
+	test("getgc", {}, function()
+	
+	
+	
+		local gc = getgc()
+	
+	
+	
+		assert(type(gc) == "table", "Did not return a table")
+	
+	
+	
+		assert(#gc > 0, "Did not return a table with any values")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getgenv", {}, function()
+	
+	
+	
+		getgenv().__TEST_GLOBAL = true
+	
+	
+	
+		assert(__TEST_GLOBAL, "Failed to set a global variable")
+	
+	
+	
+		getgenv().__TEST_GLOBAL = nil
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getloadedmodules", {}, function()
+	
+	
+	
+		local modules = getloadedmodules()
+	
+	
+	
+		assert(type(modules) == "table", "Did not return a table")
+	
+	
+	
+		assert(#modules > 0, "Did not return a table with any values")
+	
+	
+	
+		assert(typeof(modules[1]) == "Instance", "First value is not an Instance")
+	
+	
+	
+		assert(modules[1]:IsA("ModuleScript"), "First value is not a ModuleScript")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getrenv", {}, function()
+	
+	
+	
+		assert(_G ~= getrenv()._G, "The variable _G in the executor is identical to _G in the game")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getrunningscripts", {}, function()
+	
+	
+	
+		local scripts = getrunningscripts()
+	
+	
+	
+		assert(type(scripts) == "table", "Did not return a table")
+	
+	
+	
+		assert(#scripts > 0, "Did not return a table with any values")
+	
+	
+	
+		assert(typeof(scripts[1]) == "Instance", "First value is not an Instance")
+	
+	
+	
+		assert(scripts[1]:IsA("ModuleScript") or scripts[1]:IsA("LocalScript"), "First value is not a ModuleScript or LocalScript")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getscriptbytecode", {"dumpstring"}, function()
+	
+	
+	
+		local animate = game:GetService("Players").LocalPlayer.Character.Animate
+	
+	
+	
+		local bytecode = getscriptbytecode(animate)
+	
+	
+	
+		assert(type(bytecode) == "string", "Did not return a string for Character.Animate (a " .. animate.ClassName .. ")")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getscripthash", {}, function()
+	
+	
+	
+		local animate = game:GetService("Players").LocalPlayer.Character.Animate:Clone()
+	
+	
+	
+		local hash = getscripthash(animate)
+	
+	
+	
+		local source = animate.Source
+	
+	
+	
+		animate.Source = "print('Hello, world!')"
+	
+	
+	
+		task.defer(function()
+	
+	
+	
+			animate.Source = source
+	
+	
+	
+		end)
+	
+	
+	
+		local newHash = getscripthash(animate)
+	
+	
+	
+		assert(hash ~= newHash, "Did not return a different hash for a modified script")
+	
+	
+	
+		assert(newHash == getscripthash(animate), "Did not return the same hash for a script with the same source")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getscripts", {}, function()
+	
+	
+	
+		local scripts = getscripts()
+	
+	
+	
+		assert(type(scripts) == "table", "Did not return a table")
+	
+	
+	
+		assert(#scripts > 0, "Did not return a table with any values")
+	
+	
+	
+		assert(typeof(scripts[1]) == "Instance", "First value is not an Instance")
+	
+	
+	
+		assert(scripts[1]:IsA("ModuleScript") or scripts[1]:IsA("LocalScript"), "First value is not a ModuleScript or LocalScript")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getsenv", {}, function()
+	
+	
+	
+		local animate = game:GetService("Players").LocalPlayer.Character.Animate
+	
+	
+	
+		local env = getsenv(animate)
+	
+	
+	
+		assert(type(env) == "table", "Did not return a table for Character.Animate (a " .. animate.ClassName .. ")")
+	
+	
+	
+		assert(env.script == animate, "The script global is not identical to Character.Animate")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getthreadidentity", {"getidentity", "getthreadcontext"}, function()
+	
+	
+	
+		assert(type(getthreadidentity()) == "number", "Did not return a number")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("setthreadidentity", {"setidentity", "setthreadcontext"}, function()
+	
+	
+	
+		setthreadidentity(3)
+	
+	
+	
+		assert(getthreadidentity() == 3, "Did not set the thread identity")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	-- Drawing
+	
+	
+	
+	
+	
+	test("Drawing", {})
+	
+	
+	
+	
+	
+	test("Drawing.new", {}, function()
+	
+	
+	
+		local drawing = Drawing.new("Square")
+	
+	
+	
+		drawing.Visible = false
+	
+	
+	
+		local canDestroy = pcall(function()
+	
+	
+	
+			drawing:Destroy()
+	
+	
+	
+		end)
+	
+	
+	
+		assert(canDestroy, "Drawing:Destroy() should not throw an error")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("Drawing.Fonts", {}, function()
+	
+	
+	
+		assert(Drawing.Fonts.UI == 0, "Did not return the correct id for UI")
+	
+	
+	
+		assert(Drawing.Fonts.System == 1, "Did not return the correct id for System")
+	
+	
+	
+		assert(Drawing.Fonts.Plex == 2, "Did not return the correct id for Plex")
+	
+	
+	
+		assert(Drawing.Fonts.Monospace == 3, "Did not return the correct id for Monospace")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("isrenderobj", {}, function()
+	
+	
+	
+		local drawing = Drawing.new("Image")
+	
+	
+	
+		drawing.Visible = true
+	
+	
+	
+		assert(isrenderobj(drawing) == true, "Did not return true for an Image")
+	
+	
+	
+		assert(isrenderobj(newproxy()) == false, "Did not return false for a blank table")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("getrenderproperty", {}, function()
+	
+	
+	
+		local drawing = Drawing.new("Image")
+	
+	
+	
+		drawing.Visible = true
+	
+	
+	
+		assert(type(getrenderproperty(drawing, "Visible")) == "boolean", "Did not return a boolean value for Image.Visible")
+	
+	
+	
+		local success, result = pcall(function()
+	
+	
+	
+			return getrenderproperty(drawing, "Color")
+	
+	
+	
+		end)
+	
+	
+	
+		if not success or not result then
+	
+	
+	
+			return "Image.Color is not supported"
+	
+	
+	
+		end
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("setrenderproperty", {}, function()
+	
+	
+	
+		local drawing = Drawing.new("Square")
+	
+	
+	
+		drawing.Visible = true
+	
+	
+	
+		setrenderproperty(drawing, "Visible", false)
+	
+	
+	
+		assert(drawing.Visible == false, "Did not set the value for Square.Visible")
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	test("cleardrawcache", {}, function()
+	
+	
+	
+		cleardrawcache()
+	
+	
+	
+	end)
+	
+	
+	
+	
+	
+	-- WebSocket
+	
+	
+	
+	
+	
+	test("WebSocket", {})
+	
+	
+	
+	
+	
+	test("WebSocket.connect", {}, function()
+	
+	
+	
+		local types = {
+	
+	
+	
+			Send = "function",
+	
+	
+	
+			Close = "function",
+	
+	
+	
+			OnMessage = {"table", "userdata"},
+	
+	
+	
+			OnClose = {"table", "userdata"},
+	
+	
+	
+		}
+	
+	
+	
+		local ws = WebSocket.connect("ws://echo.websocket.events")
+	
+	
+	
+		assert(type(ws) == "table" or type(ws) == "userdata", "Did not return a table or userdata")
+	
+	
+	
+		for k, v in pairs(types) do
+	
+	
+	
+			if type(v) == "table" then
+	
+	
+	
+				assert(table.find(v, type(ws[k])), "Did not return a " .. table.concat(v, ", ") .. " for " .. k .. " (a " .. type(ws[k]) .. ")")
+	
+	
+	
+			else
+	
+	
+	
+				assert(type(ws[k]) == v, "Did not return a " .. v .. " for " .. k .. " (a " .. type(ws[k]) .. ")")
+	
+	
+	
+			end
+	
+	
+	
+		end
+	
+	
+	
+		ws:Close()
+	
+	
+	
+	end)
+	
+	-- Additional Tests
+	
+	-- Table Utilities
+	
+	test("table.insert", {}, function()
+		local t = {1, 2, 3}
+		table.insert(t, 4)
+		assert(#t == 4 and t[4] == 4, "Failed to insert into table")
+	end)
+	
+	test("table.remove", {}, function()
+		local t = {1, 2, 3, 4}
+		table.remove(t, 2)
+		assert(#t == 3 and t[2] == 3, "Failed to remove from table")
+	end)
+	
+	test("table.sort", {}, function()
+		local t = {3, 1, 4, 2}
+		table.sort(t)
+		assert(t[1] == 1 and t[2] == 2 and t[3] == 3 and t[4] == 4, "Failed to sort table")
+	end)
+	
+	test("table.concat", {}, function()
+		local t = {"Hello", " ", "World"}
+		local result = table.concat(t)
+		assert(result == "Hello World", "Failed to concatenate table elements")
+	end)
+	
+	-- String Utilities
+	
+	test("string.sub", {}, function()
+		local str = "Hello World"
+		local result = string.sub(str, 1, 5)
+		assert(result == "Hello", "Failed to substring")
+	end)
+	
+	test("string.gsub", {}, function()
+		local str = "Hello World"
+		local result = string.gsub(str, "World", "Lua")
+		assert(result == "Hello Lua", "Failed to replace substring")
+	end)
+	
+	test("string.find", {}, function()
+		local str = "Hello World"
+		local start, stop = string.find(str, "World")
+		assert(start == 7 and stop == 11, "Failed to find substring")
+	end)
+	
+	test("string.upper", {}, function()
+		local str = "hello world"
+		local result = string.upper(str)
+		assert(result == "HELLO WORLD", "Failed to convert string to uppercase")
+	end)
+	
+	-- Number Utilities
+	
+	test("math.abs", {}, function()
+		local result = math.abs(-10)
+		assert(result == 10, "Failed to get absolute value")
+	end)
+	
+	test("math.sqrt", {}, function()
+		local result = math.sqrt(16)
+		assert(result == 4, "Failed to get square root")
+	end)
+	
+	test("math.random", {}, function()
+		local result = math.random(1, 10)
+		assert(result >= 1 and result <= 10, "Failed to get random number within range")
+	end)
+	
+	test("math.max", {}, function()
+		local result = math.max(1, 3, 2)
+		assert(result == 3, "Failed to get maximum value")
+	end)
+	
+	-- File System Utilities
+	
+	test("writefile", {}, function()
+		writefile(".tests/writefile_new.txt", "new content")
+		assert(readfile(".tests/writefile_new.txt") == "new content", "Failed to write file")
+	end)
+	
+	test("readfile", {}, function()
+		writefile(".tests/readfile_new.txt", "content")
+		assert(readfile(".tests/readfile_new.txt") == "content", "Failed to read file")
+	end)
+	
+	test("appendfile", {}, function()
+		writefile(".tests/appendfile_new.txt", "part1")
+		appendfile(".tests/appendfile_new.txt", "part2")
+		assert(readfile(".tests/appendfile_new.txt") == "part1part2", "Failed to append file")
+	end)
+	
+	test("isfile", {}, function()
+		writefile(".tests/isfile_new.txt", "check")
+		assert(isfile(".tests/isfile_new.txt") == true, "Failed to confirm file existence")
+	end)
+	
+	test("isfolder", {}, function()
+		makefolder(".tests/isfolder_new")
+		assert(isfolder(".tests/isfolder_new") == true, "Failed to confirm folder existence")
+	end)
+	
+	-- Debug Utilities
+	
+	test("debug.getlocal", {}, function()
+		local function test()
+			local x = 5
+			local y = 10
+			local locals = debug.getlocal(1, 1)
+			assert(locals == "x", "Failed to get local variable name")
+		end
+		test()
+	end)
+	
+	test("debug.setlocal", {}, function()
+		local function test()
+			local x = 5
+			debug.setlocal(1, 1, 10)
+			assert(x == 10, "Failed to set local variable")
+		end
+		test()
+	end)
+	
+	test("debug.getupvalue", {}, function()
+		local function outer()
+			local up = 5
+			local function inner()
+				return up
+			end
+			assert(debug.getupvalue(inner, 1) == up, "Failed to get upvalue")
+		end
+		outer()
+	end)
+	
+	-- Date and Time Utilities
+	
+	test("os.date", {}, function()
+		local date = os.date("%Y-%m-%d")
+		local currentDate = os.date("*t")
+		assert(date == string.format("%d-%02d-%02d", currentDate.year, currentDate.month, currentDate.day), "Failed to get current date")
+	end)
+	
+	test("os.time", {}, function()
+		local t = os.time()
+		assert(type(t) == "number", "Failed to get current time")
+	end)
+	
+	test("os.difftime", {}, function()
+		local t1 = os.time()
+		local t2 = os.time() + 100
+		local diff = os.difftime(t2, t1)
+		assert(diff == 100, "Failed to calculate time difference")
+	end)
+	
+	-- Networking Utilities
+	
+	test("http.get", {}, function()
+		local response = http.get("https://httpbin.org/get")
+		assert(response, "Failed to make GET request")
+	end)
+	
+	test("http.post", {}, function()
+		local response = http.post("https://httpbin.org/post", "test data")
+		assert(response, "Failed to make POST request")
+	end)
+	
+	test("http.request", {}, function()
+		local response = http.request({
+			Url = "https://httpbin.org/get",
+			Method = "GET"
+		})
+		assert(response, "Failed to make HTTP request")
+	end)
+	
+end
+coroutine.wrap(KNPWMC_fake_script)()
