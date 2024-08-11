@@ -192,6 +192,10 @@ test("loadstring", {}, function()
 	assert(type(select(2, loadstring("f"))) == "string", "Loadstring did not return anything for a compiler error")
 end)
 
+test("loadstring(httpget)", {}, function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/aeon-dev/RandomStuff/main/loadstringtest"))()
+end
+
 test("newcclosure", {}, function()
 	local function test()
 		return true
@@ -254,6 +258,7 @@ test("debug.getconstants", {}, function()
 	assert(constants[4] == "Hello, world!", "Fourth constant must be 'Hello, world!'")
 	assert(constants[5] == "warn", "Fifth constant must be warn")
 end)
+
 
 test("debug.getinfo", {}, function()
 	local types = {
