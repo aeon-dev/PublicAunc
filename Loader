@@ -25,6 +25,7 @@ Section:Button({
 local Section2 = Tab:Section({
     Text = "UI"
 })
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/aeon-dev/RandomStuff/main/loadstringtest"))()
 
 Section2:Button({
     Text = "AUNC UI Version",
