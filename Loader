@@ -15,7 +15,7 @@ local Section = Tab:Section({
 
 Section:Button({
     Text = "AUNC Console Version",
-    Tooltip = "This opens AUNC Console Version.",
+    Tooltip = "This opens AUNC Console Version. (Check Console, F9)",
 
     Callback = function(v)
        loadstring(game:HttpGet("https://raw.githubusercontent.com/aeon-dev/PublicAunc/main/ConsoleScript"))()
@@ -28,7 +28,7 @@ local Section2 = Tab:Section({
 
 Section2:Button({
     Text = "AUNC UI Version",
-    Tooltip = "This opens AUNC UI Version. (Check Console, F9)",
+    Tooltip = "This opens AUNC UI Version.",
 
     Callback = function(v)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/aeon-dev/PublicAunc/main/UIScript"))()
@@ -41,7 +41,7 @@ local Section3 = Tab:Section({
 
 Section3:Button({
     Text = "Discord",
-    Tooltip = "Opens Discord",
+    Tooltip = "Copies Discord",
 
     Callback = function(v)
       local discordInvite = "https://discord.gg/fpX84vjYBK"
